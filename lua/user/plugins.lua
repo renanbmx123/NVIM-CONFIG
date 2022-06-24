@@ -44,6 +44,8 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "windwp/nvim-autopairs" -- Autopairs {} [] ()...
+  use "numToStr/Comment.nvim"
 
   -- Colorschemes
   --use "lunarvim/colorschemes" -- Bunch of colorschemes
@@ -57,14 +59,31 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
  
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer 
+  use "tamago324/nlsp-settings.nvim"
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim" --  Telescope fuzzy finder
+  use "nvim-telescope/telescope-media-files.nvim" --
+ 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
