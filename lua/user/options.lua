@@ -25,12 +25,12 @@ local options = {
 	tabstop = 1,				-- Insert 2 spaces for a tab
 	cursorline = true, 			-- highlight the current line
 	number = true,				-- set numbered lines
-	relativenumber = false,			-- Set relative numbered lines
+	relativenumber = true,			-- Set relative numbered lines
 	numberwidth = 2,			-- Set number column width to 2 {default 4}
 	signcolumn = "yes",			-- Always show the sign column. otherwise it would shift the text each time
 	wrap = false,				-- Display lines as one long line
-	scrolloff = 8,				
-	sidescrolloff = 8,
+	scrolloff = 3,				
+	sidescrolloff = 3,
 	guifont = "monospace:h18"		-- The font used in grafical neovim applications
 	
 }
